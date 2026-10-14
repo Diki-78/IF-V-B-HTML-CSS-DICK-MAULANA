@@ -1,0 +1,67 @@
+/* Responsive layout and small-screen refinements */
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #c8e4dc;
+    color: #18383d;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .main-container {
+        gap: 14px;
+    }
+
+    .header {
+        padding: 15px 5px 9px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .card,
+    .card-pink {
+        padding: 17px 15px;
+    }
+
+    .card-header {
+        font-size: 16px;
+    }
+
+    .callout-gradient,
+    .formatting-box,
+    .form-container {
+        padding: 14px;
+    }
+
+    .custom-table {
+        min-width: 560px;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .code-box {
+        padding: 15px 12px;
+        font-size: 12px;
+    }
+
+    .summary-box {
+        padding: 19px 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

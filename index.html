@@ -1,9 +1,229 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A practical introduction to HTML fundamentals, common elements, forms, and project structure.">
+    <title>HTML Learning Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="second.css">
 </head>
-
 <body>
-</body>
+    <main class="main-container">
+        <header class="header">
+            <p class="eyebrow">A practical web development guide</p>
+            <h1>🌐 HTML Learning Project</h1>
+            <p>A comprehensive guide to HTML fundamentals</p>
+        </header>
 
+        <section class="card" aria-labelledby="what-is-html">
+            <h2 class="card-header" id="what-is-html"><span class="icon" aria-hidden="true">🚀</span> What is HTML?</h2>
+            <p class="section-desc">HTML stands for HyperText Markup Language. It is the standard markup language for creating Web pages.</p>
+            <div class="callout-gradient">
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>Standard markup language</li>
+                    <li>Describes the structure of a Web page</li>
+                    <li>Consists of a series of elements</li>
+                </ul>
+            </div>
+            <p class="section-desc section-lead">How HTML works:</p>
+            <p class="section-desc">HTML elements tell the browser how to display the content.</p>
+            <div class="code-box"><span class="code-badge">HTML</span><pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre></div>
+        </section>
+
+        <section class="card" aria-labelledby="basic-structure">
+            <h2 class="card-header" id="basic-structure"><span class="icon" aria-hidden="true">📄</span> Basic HTML Structure</h2>
+            <p class="section-desc">Every HTML document has a required structure:</p>
+            <div class="code-box"><span class="code-badge">HTML</span><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+            <div class="callout-gradient">
+                <h3>Structure Breakdown:</h3>
+                <ul>
+                    <li><code class="tag-code">&lt;!DOCTYPE html&gt;</code> Defines that this document is an HTML5 document</li>
+                    <li><code class="tag-code">&lt;html&gt;</code> The root element of an HTML page</li>
+                    <li><code class="tag-code">&lt;head&gt;</code> Contains meta information about the HTML page</li>
+                    <li><code class="tag-code">&lt;body&gt;</code> Defines the document's body</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="essential-tags">
+            <h2 class="card-header" id="essential-tags"><span class="icon" aria-hidden="true">📌</span> Essential HTML Tags</h2>
+            <div class="table-scroll"><table class="custom-table">
+                <thead><tr><th scope="col">Tag</th><th scope="col">Description</th><th scope="col">Example</th></tr></thead>
+                <tbody>
+                    <tr><td><code class="tag-code">&lt;h1&gt;-&lt;h6&gt;</code></td><td>Defines HTML headings</td><td><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></td></tr>
+                    <tr><td><code class="tag-code">&lt;p&gt;</code></td><td>Defines a paragraph</td><td><code>&lt;p&gt;Text&lt;/p&gt;</code></td></tr>
+                    <tr><td><code class="tag-code">&lt;a&gt;</code></td><td>Defines a hyperlink</td><td><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></td></tr>
+                    <tr><td><code class="tag-code">&lt;img&gt;</code></td><td>Defines an image</td><td><code>&lt;img src="pic.jpg" alt="Description"&gt;</code></td></tr>
+                    <tr><td><code class="tag-code">&lt;ul&gt;/&lt;ol&gt;</code></td><td>Defines lists</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+                    <tr><td><code class="tag-code">&lt;div&gt;</code></td><td>Defines a section</td><td><code>&lt;div&gt;Content&lt;/div&gt;</code></td></tr>
+                </tbody>
+            </table></div>
+        </section>
+
+        <section class="card" aria-labelledby="text-formatting">
+            <h2 class="card-header" id="text-formatting"><span class="icon" aria-hidden="true">✍️</span> Text Formatting</h2>
+            <div class="formatting-box">
+                <h3>This is an H1 heading</h3>
+                <h4>Heading 2 Example</h4>
+                <p>This is a standard paragraph with <strong>bold</strong>, <em>italic</em>, <u>underlined</u>, and <code>code</code> text.</p>
+                <p><strong>List Examples:</strong></p>
+                <ul><li>Bullet point 1</li><li>Bullet point 2</li></ul>
+                <ol><li>Numbered item 1</li><li>Numbered item 2</li></ol>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="html-forms">
+            <h2 class="card-header" id="html-forms"><span class="icon" aria-hidden="true">📝</span> HTML Forms</h2>
+            <p class="section-desc">Forms are used to collect user input:</p>
+            <div class="code-box"><span class="code-badge">HTML</span><pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre></div>
+            <div class="form-container">
+                <h3>Contact Us</h3>
+                <form action="#" method="get" onsubmit="return false;">
+                    <div class="form-group"><label for="contact-name">Name:</label><input id="contact-name" name="name" type="text" placeholder="Enter your name"></div>
+                    <div class="form-group"><label for="contact-email">Email:</label><input id="contact-email" name="email" type="email" placeholder="Enter your email"></div>
+                    <div class="form-group"><label for="contact-subject">Subject:</label><select id="contact-subject" name="subject"><option value="">Select a subject</option><option>General Inquiry</option><option>Support</option></select></div>
+                    <div class="form-group"><label for="contact-message">Message:</label><textarea id="contact-message" name="message" placeholder="Type your message here..."></textarea></div>
+                    <button class="btn-submit" type="submit">Submit Form</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="html-attributes">
+            <h2 class="card-header" id="html-attributes"><span class="icon" aria-hidden="true">🏷️</span> HTML Attributes</h2>
+            <p class="section-desc">Attributes provide additional information about elements:</p>
+            <div class="code-box"><span class="code-badge">HTML</span><pre><code>&lt;a href="https://example.com" target="_blank" rel="noopener" class="btn"&gt;Visit Site&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;</code></pre></div>
+            <div class="callout-gradient">
+                <h3>Common Attributes:</h3>
+                <ul>
+                    <li><code class="tag-code">href</code> - Specifies the URL for a link</li>
+                    <li><code class="tag-code">src</code> - Specifies the path to an image</li>
+                    <li><code class="tag-code">alt</code> - Specifies alternate text for an image</li>
+                    <li><code class="tag-code">class</code> - Specifies class names for elements</li>
+                    <li><code class="tag-code">id</code> - Specifies a unique id for an element</li>
+                    <li><code class="tag-code">style</code> - Specifies inline CSS styles</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="html-media">
+            <h2 class="card-header" id="html-media"><span class="icon" aria-hidden="true">🖼️</span> Media in HTML</h2>
+            <p class="section-desc">HTML supports various media elements:</p>
+            <div class="code-box"><span class="code-badge">HTML</span><pre><code>&lt;img src="pic.jpg" alt="Picture"&gt;
+&lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;
+&lt;video width="320" height="240" controls&gt;&lt;source src="movie.mp4"&gt;&lt;/video&gt;</code></pre></div>
+            <div class="table-scroll"><table class="custom-table">
+                <thead><tr><th scope="col">Media</th><th scope="col">Tag</th><th scope="col">Attr</th><th scope="col">Status</th></tr></thead>
+                <tbody>
+                    <tr><td>Images</td><td><code class="tag-code">&lt;img&gt;</code></td><td>src, alt</td><td><span class="status-badge">✔ Active</span></td></tr>
+                    <tr><td>Audio</td><td><code class="tag-code">&lt;audio&gt;</code></td><td>src, controls</td><td><span class="status-badge">✔ Active</span></td></tr>
+                    <tr><td>Video</td><td><code class="tag-code">&lt;video&gt;</code></td><td>src, controls</td><td><span class="status-badge">✔ Active</span></td></tr>
+                </tbody>
+            </table></div>
+        </section>
+
+        <section class="card-pink" aria-labelledby="practical-examples">
+            <h2 class="card-header" id="practical-examples"><span class="icon" aria-hidden="true">💡</span> Practical Examples</h2>
+            <h3>Common Tasks:</h3>
+            <ul>
+                <li>Creating a navigation bar using <code class="tag-code">&lt;nav&gt;</code> and <code class="tag-code">&lt;ul&gt;</code></li>
+                <li>Building a simple contact form</li>
+                <li>Making a responsive card layout</li>
+            </ul>
+            <h3>Best Practices:</h3>
+            <ul>
+                <li>Always use semantic HTML tags</li>
+                <li>Include <code class="tag-code">alt</code> attributes for images</li>
+                <li>Keep HTML clean and properly indented</li>
+                <li>Validate your HTML code</li>
+            </ul>
+        </section>
+
+        <section class="card" aria-labelledby="project-structure">
+            <h2 class="card-header" id="project-structure"><span class="icon" aria-hidden="true">📁</span> Project Structure</h2>
+            <p class="section-desc">Recommended folder layout for web projects:</p>
+            <div class="code-box"><pre><code>project-folder/
+├── index.html
+├── style.css
+├── second.css
+└── README.md</code></pre></div>
+        </section>
+
+        <section class="callout-gradient next-steps" aria-labelledby="next-steps">
+            <h2 id="next-steps"><span aria-hidden="true">🎯</span> Next Steps in Your Learning Journey</h2>
+            <p class="section-lead">Recommended path:</p>
+            <ul>
+                <li>Master CSS for styling and page layout</li>
+                <li>Learn JavaScript to add interactivity</li>
+                <li>Explore responsive web design principles</li>
+                <li>Build real-world projects to solidify skills</li>
+            </ul>
+        </section>
+
+        <section class="card" aria-labelledby="beginner-tasks">
+            <h2 class="card-header" id="beginner-tasks"><span class="icon" aria-hidden="true">🌱</span> Beginner Tasks</h2>
+            <ol class="task-list">
+                <li>Create an HTML page with a title, one main heading, and two paragraphs about yourself.</li>
+                <li>Add a list of three favorite activities using an unordered list.</li>
+                <li>Add a link to a website you like and an image with descriptive alt text.</li>
+                <li>Use <code class="tag-code">&lt;strong&gt;</code> and <code class="tag-code">&lt;em&gt;</code> to format important words.</li>
+            </ol>
+        </section>
+
+        <section class="card" aria-labelledby="intermediate-tasks">
+            <h2 class="card-header" id="intermediate-tasks"><span class="icon" aria-hidden="true">🧩</span> Intermediate Tasks</h2>
+            <ol class="task-list">
+                <li>Build a semantic page with <code class="tag-code">&lt;header&gt;</code>, <code class="tag-code">&lt;nav&gt;</code>, <code class="tag-code">&lt;main&gt;</code>, and <code class="tag-code">&lt;footer&gt;</code>.</li>
+                <li>Create a contact form with labeled name and email fields, a subject selector, and a message area.</li>
+                <li>Make a table that presents at least three items with clear column headings.</li>
+                <li>Link a separate CSS file and make the page readable on both desktop and mobile screens.</li>
+            </ol>
+        </section>
+
+        <section class="card" aria-labelledby="developer-tools">
+            <h2 class="card-header" id="developer-tools"><span class="icon" aria-hidden="true">🔧</span> Developer Tools</h2>
+            <p class="section-desc">Recommended tools:</p>
+            <div class="tool-grid">
+                <section class="tool-category">
+                    <h3>Text Editors</h3>
+                    <p>Visual Studio Code, Sublime Text</p>
+                </section>
+                <section class="tool-category">
+                    <h3>Browsers</h3>
+                    <p>Google Chrome, Mozilla Firefox</p>
+                </section>
+                <section class="tool-category">
+                    <h3>Version Control</h3>
+                    <p>Git, GitHub</p>
+                </section>
+                <section class="tool-category">
+                    <h3>Online Editors</h3>
+                    <p>CodePen, JSFiddle</p>
+                </section>
+            </div>
+        </section>
+
+        <footer class="summary-box">
+            <h2><span aria-hidden="true">🌟</span> Summary &amp; Conclusion</h2>
+            <p>HTML is the backbone of web development. Master these concepts and you'll have a solid foundation for learning CSS and JavaScript!</p>
+            <p class="summary-emphasis">Keep practicing, build projects, and keep learning!</p>
+        </footer>
+        <p class="congratulations">Congratulations on completing the HTML learning guide!</p>
+    </main>
+</body>
 </html>
